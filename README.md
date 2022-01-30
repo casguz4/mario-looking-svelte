@@ -9,7 +9,7 @@ I didn't use TypeScript. Sue me.
 I did draw up schema on my dry-erase board.
 
 you'll probably disagree with the file structure. 
-
+```
 src
 |_ components
 | |_ Navigation
@@ -23,7 +23,7 @@ src
 |_ util
 |_ App.svelte
 |_ store.js
-
+```
 ---
 
 # Mario Baseball Draft app
