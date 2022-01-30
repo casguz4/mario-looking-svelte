@@ -1,10 +1,32 @@
-_Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing._
+This app was an attempt to learn svelte through making a mario baseball draft simulator. I have previously made one in React and it is located 
+[here](https://www.mariosluggersteambuilder.com/), go check it out. 
 
-_Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)_
+Any way, doing this is in Svelte was pretty fun. I actually think it was a bit easier not using MaterialUI as well. It would be easy to setup a theme with global css files and variables, even a theme toggle would be pretty simple to setup. I chose to use the writable store for `isDraftSet` and my global `teams` object. By assigning the teams as key/value pairs it was pretty easy to setup the snake format this time around. Because I didn't use MaterialUI components I didn't have as robust of a draft table as in the hosted app. I don't think it will be too difficult to write compare functions to sort by the headings without the help of the library though. 
+
+Svelte-navigator made the route guards really easy
+
+I didn't use TypeScript. Sue me. 
+I did draw up schema on my dry-erase board.
+
+you'll probably disagree with the file structure. 
+
+src
+|_ components
+| |_ Navigation
+| |_ PrivateRoute
+|_ data
+|_ pages
+| |_ Draftboard
+| |_ Home
+| |_ Roster
+| |_ Setup
+|_ util
+|_ App.svelte
+|_ store.js
 
 ---
 
-# svelte app
+# Mario Baseball Draft app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
