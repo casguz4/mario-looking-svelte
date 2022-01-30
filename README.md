@@ -5,7 +5,8 @@ Any way, doing this is in Svelte was pretty fun. I actually think it was a bit e
 
 Svelte-navigator made the route guards really easy
 
-I didn't use TypeScript. Sue me. 
+I didn't use TypeScript. Sue me.
+
 I did draw up schema on my dry-erase board.
 
 you'll probably disagree with the file structure. 
