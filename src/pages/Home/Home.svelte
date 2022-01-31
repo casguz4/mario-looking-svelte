@@ -2,7 +2,6 @@
 	import { useNavigate, useLocation } from 'svelte-navigator';
 	const navigate = useNavigate();
 	const location = useLocation();
-	let heading = 'Home';
 
 	const handleCategoryClick = (route) => {
 		navigate(`/${route}`, {
@@ -13,7 +12,8 @@
 </script>
 
 <main>
-	<h1>{heading}</h1>
+	<h1>Welcome!</h1>
+	<h2>Draft and Team Building for Mario Super Sluggers!</h2>
 	<p>
 		This is a prototype for Svelte. The goal of this is to recreate a Mario Super Sluggers Draft. Some things we are
 		using:
@@ -79,6 +79,7 @@
 	.categories {
 		display: flex;
 		justify-content: space-between;
+		flex-flow: row wrap;
 		margin-bottom: 30px;
 	}
 
@@ -90,5 +91,8 @@
 		margin: 0 10px;
 		border-left: 1px solid #fff;
 		border-right: 1px solid #fff;
+	}
+
+	@media (min-width: 660px) {
 	}
 </style>
