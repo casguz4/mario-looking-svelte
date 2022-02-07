@@ -1,5 +1,9 @@
 <script>
 	import { useNavigate, useLocation } from 'svelte-navigator';
+
+	const SETUP = 'setup';
+	const ROSTER = 'roster';
+
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -12,8 +16,7 @@
 </script>
 
 <main>
-	<h1>Welcome!</h1>
-	<h2>Draft and Team Building for Mario Super Sluggers!</h2>
+	<h1>Draft and Team Building for Mario Super Sluggers!</h1>
 	<p>
 		This is a prototype for Svelte. The goal of this is to recreate a Mario Super Sluggers Draft. Some things we are
 		using:
@@ -34,7 +37,7 @@
 			</p>
 			<button
 				on:click={() => {
-					handleCategoryClick('setup');
+					handleCategoryClick(SETUP);
 				}}>Let's Start!</button
 			>
 		</div>
@@ -46,7 +49,7 @@
 			</p>
 			<button
 				on:click={() => {
-					handleCategoryClick('roster');
+					handleCategoryClick(ROSTER);
 				}}>View Roster</button
 			>
 		</div>
@@ -58,7 +61,7 @@
 			</p>
 			<button
 				on:click={() => {
-					handleCategoryClick('setup');
+					handleCategoryClick(SETUP);
 				}}>Go Setup!</button
 			>
 		</div>
@@ -86,13 +89,21 @@
 	.category {
 		padding: 15px 10px;
 	}
-
 	.category:nth-of-type(2) {
-		margin: 0 10px;
-		border-left: 1px solid #fff;
-		border-right: 1px solid #fff;
+		border-top: 1px solid var(--secondary-color);
+		border-bottom: 1px solid var(--secondary-color);
 	}
 
 	@media (min-width: 660px) {
+		.categories {
+			flex-flow: row;
+		}
+		.category:nth-of-type(2) {
+			margin: 0 10px;
+			border-top: none;
+			border-bottom: none;
+			border-left: 1px solid var(--secondary-color);
+			border-right: 1px solid var(--secondary-color);
+		}
 	}
 </style>

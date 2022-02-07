@@ -1,10 +1,12 @@
 :root {
-	--primary-color: #ff00ff;
-	--primary-color-hover: #de00de;
-	--secondary-color: #00ffff;
-	--secondary-color-hover: #00dede;
-	--background: #1b1b1b;
-	--color: #e0e0e0;
+	--primary-color: #add8e6; /* lightblue */
+	--primary-color-hover: #8db8d6;
+	--secondary-color: #f8bba2; /* melon */
+	--secondary-color-hover: #d89b82;
+	--success: #90ee94; /* lightgreen */
+	--error: #fe8686; /* lightcoral */
+	--background: #36363a; /* jet */
+	--text: #fefefe;
 	--border-gray: #999;
 	--black: #000;
 	--white: #fff;
@@ -25,7 +27,7 @@ body {
 
 body {
 	background: var(--background);
-	color: var(--color);
+	color: var(--text);
 	margin: 0;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
@@ -33,7 +35,7 @@ body {
 }
 
 a {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	text-decoration: none;
 }
 
@@ -43,6 +45,7 @@ a:hover {
 
 a:visited {
 	color: var(--primary-color-hover);
+	border-bottom: 1px solid var(--primary-color-hover);
 }
 
 label {
@@ -59,20 +62,23 @@ textarea {
 	padding: 0.4em;
 	margin: 0 0 0.5em 0;
 	box-sizing: border-box;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-gray);
 	border-radius: 2px;
 }
 
 input:disabled {
-	color: #ccc;
+	color: var(--border-gray);
 }
 
 button {
+	min-width: 105px;
+	min-height: 45px;
+	border-radius: 5px;
 	font-weight: 600;
-	color: var(--background);
 	background-color: var(--secondary-color);
 	border: 1px solid var(--secondary-color-hover);
 	outline: none;
+	color: var(--black);
 	transition: all 0.2s ease;
 }
 button:hover {
@@ -82,7 +88,7 @@ button:hover {
 }
 
 button:disabled {
-	color: var(--border-grey);
+	color: var(--border-gray);
 	cursor: not-allowed;
 }
 
@@ -92,4 +98,12 @@ button:not(:disabled):active {
 
 *:focus {
 	border-color: var(--secondary-color);
+}
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus {
+	border: none;
 }

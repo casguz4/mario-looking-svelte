@@ -14,13 +14,6 @@
 <Router>
 	<Navigation />
 	<main>
-		<!-- {#if $isDraftSet}
-			<Draftboard />
-		{/if}
-		{#if !$isDraftSet}
-			<Setup />
-		{/if} -->
-		<!-- <Draftboard /> -->
 		<Route path="/">
 			<Home />
 		</Route>
